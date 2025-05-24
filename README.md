@@ -25,7 +25,7 @@ Transfer Quota Monitor enables Nextcloud administrators to set and enforce month
 3. Click Download and Enable
 
 ### Manual Installation
-1. Download the latest release from [GitHub](https://github.com/bruce90matrix/transfer_quota_monitor/releases)
+1. Download the latest release from [GitHub](https://github.com/Bruce-Matrix/transfer_quota_monitor/releases)
 2. Extract to your Nextcloud apps folder
 3. Enable from the Apps management page
 
@@ -92,7 +92,7 @@ This app was inspired by and builds upon concepts from:
 
 ## Support
 
-- GitHub Issues: [Report a bug](https://github.com/bruce90matrix/transfer_quota_monitor/issues)
+- GitHub Issues: [Report a bug](https://github.com/Bruce-Matrix/transfer_quota_monitor/issues)
 - Email: bruce90matrix@gmail.com
 
 ## License
