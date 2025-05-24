@@ -43,7 +43,6 @@
         <job>OCA\TransferQuotaMonitor\Cron\MonthlyReset</job>
         <job>OCA\TransferQuotaMonitor\Cron\UsageTrackingJob</job>
     </background-jobs>
-    <commands>
-        <command>OCA\TransferQuotaMonitor\Command\ProcessActivityDownloads</command>
-    </commands>
+    <!-- Commands removed to fix dependency issues -->
+
 </info>
