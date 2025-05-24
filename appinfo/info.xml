@@ -12,11 +12,14 @@
     <category>monitoring</category>
     <category>files</category>
     
-    <website>https://github.com/bruce90matrix/transfer-quota-monitor</website>
-    <bugs>https://github.com/bruce90matrix/transfer-quota-monitor/issues</bugs>
-    <repository type="git">https://github.com/bruce90matrix/transfer-quota-monitor.git</repository>
-    <screenshot>https://raw.githubusercontent.com/bruce90matrix/transfer-quota-monitor/main/screenshots/admin-dashboard.png</screenshot>
-    <screenshot>https://raw.githubusercontent.com/bruce90matrix/transfer-quota-monitor/main/screenshots/user-notification.png</screenshot>
+    <website>https://github.com/bruce90matrix/transfer_quota_monitor</website>
+    <bugs>https://github.com/bruce90matrix/transfer_quota_monitor/issues</bugs>
+    <repository type="git">https://github.com/bruce90matrix/transfer_quota_monitor.git</repository>
+    <screenshot>https://raw.githubusercontent.com/bruce90matrix/transfer_quota_monitor/main/screenshots/admin-dashboard.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/bruce90matrix/transfer_quota_monitor/main/screenshots/user-notification-bell.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/bruce90matrix/transfer_quota_monitor/main/screenshots/user-notification-email.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/bruce90matrix/transfer_quota_monitor/main/screenshots/admin-notification.png</screenshot>
+    
     
     <dependencies>
         <nextcloud min-version="31" max-version="32"/>
