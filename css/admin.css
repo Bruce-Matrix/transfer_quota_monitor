@@ -1,0 +1,62 @@
+#transfer_quota_settings {
+    max-width: 800px;
+    margin: 20px;
+}
+
+#transfer_quota_settings h2 {
+    margin-bottom: 20px;
+}
+
+#transfer_quota_settings h3 {
+    margin: 25px 0 10px;
+}
+
+.quota-warning-thresholds input {
+    width: 80px;
+    margin-left: 10px;
+}
+
+.quota-warning-thresholds p {
+    margin: 10px 0;
+}
+
+#transfer_quota_limits {
+    width: 100%;
+    margin-top: 15px;
+}
+
+#transfer_quota_limits th {
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+}
+
+#transfer_quota_limits td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--color-border-dark);
+}
+
+#transfer_quota_limits input[type="number"] {
+    width: 100px;
+}
+
+.settings-hint {
+    color: var(--color-text-maxcontrast);
+    margin-bottom: 15px;
+}
+
+#quota_msg {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+#quota_msg.success {
+    background-color: var(--color-success);
+    color: var(--color-main-text);
+}
+
+#quota_loading {
+    margin: 15px 0;
+}
