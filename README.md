@@ -14,7 +14,7 @@ Transfer Quota Monitor enables Nextcloud administrators to set and enforce month
 - **Download & Upload Tracking**: Monitors both incoming and outgoing transfers
 - **Registered User Support**: Works with regular and guest accounts
 
-![Admin Dashboard](https://raw.githubusercontent.com/bruce90matrix/transfer_quota_monitor/main/screenshots/admin-dashboard.png)
+![Admin Dashboard](https://github.com/Bruce-Matrix/transfer_quota_monitor/blob/main/screenshots/admin-dashboard.png)
 
 
 ## Installation
@@ -46,13 +46,13 @@ Transfer Quota Monitor enables Nextcloud administrators to set and enforce month
 The app provides a comprehensive notification system:
 
 1. **In-App Notifications**: Users receive alerts via the Nextcloud notification bell when they reach threshold limits
-   ![User Bell Notification](https://raw.githubusercontent.com/bruce90matrix/transfer_quota_monitor/main/screenshots/user-notification-bell.png)
+   ![User Bell Notification](https://github.com/Bruce-Matrix/transfer_quota_monitor/blob/main/screenshots/user-notification-bell.png)
 
 2. **User Email Notifications**: Users receive email alerts when they reach threshold limits
-   ![User Email Notification](https://raw.githubusercontent.com/bruce90matrix/transfer_quota_monitor/main/screenshots/user-notification-email.png)
+   ![User Email Notification](https://github.com/Bruce-Matrix/transfer_quota_monitor/blob/main/screenshots/user-notification-email.png)
 
 3. **Admin Email Notifications**: Administrators receive email alerts when users exceed critical thresholds (90% or higher)
-   ![Admin Notification](https://raw.githubusercontent.com/bruce90matrix/transfer_quota_monitor/main/screenshots/admin-notification.png)
+   ![Admin Notification](https://github.com/Bruce-Matrix/transfer_quota_monitor/blob/main/screenshots/admin-notification.png)
 
 ## Guest Account Strategy
 
