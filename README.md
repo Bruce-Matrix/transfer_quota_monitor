@@ -97,5 +97,5 @@ This app was inspired by and builds upon concepts from:
 
 ## License
 
-AGPL v3. See [COPYING](./COPYING) for details.
+AGPL v3. See [COPYING](./COPYING.md) for details.
 
