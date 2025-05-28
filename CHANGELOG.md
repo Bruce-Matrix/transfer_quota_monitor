@@ -1,5 +1,12 @@
 # Changelog
 
+
+## 1.0.1 - 2025-05-28
+### Fixed
+- Removed deprecated ActivityDownloadTrackerJob references
+- Removed unused public share tracking components in favor of guest account approach
+- Fixed background job error messages in server logs
+
 ## 1.0.0 - 2025-05-24
 ### Added
 - Initial release
