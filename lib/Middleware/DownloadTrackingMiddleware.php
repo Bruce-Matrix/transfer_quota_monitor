@@ -107,7 +107,7 @@ class DownloadTrackingMiddleware extends Middleware {
             if ((strpos($uri, '/s/') !== false || strpos($uri, '/apps/files_sharing/') !== false) && 
                 (strpos($methodName, 'download') !== false || $this->request->getParam('download') !== null)) {
                 $this->logger->debug('Detected public share download request: ' . $uri);
-                $this->trackPublicShareDownload();
+                // Public share tracking removed in favor of guest accounts
                 return;
             }
             
@@ -277,30 +277,7 @@ class DownloadTrackingMiddleware extends Middleware {
         }
     }
     
-    /**
-     * Track a public share download
-     */
-    private function trackPublicShareDownload() {
-        // For public shares, we need to get the node ID or path if available
-        $fileId = $this->request->getParam('fileId', null);
-        $path = $this->request->getParam('path', '');
-        $file = $this->request->getParam('files', '');
-        
-        // If we have a file ID, track by ID
-        if ($fileId) {
-            $this->trackFileById($fileId);
-            return;
-        }
-        
-        // If we have a path or file name, try to track
-        if (!empty($path)) {
-            $this->trackFileBySharePath($path);
-        } else if (!empty($file)) {
-            if (is_string($file)) {
-                $this->trackFileBySharePath($file);
-            }
-        }
-    }
+    // Public share tracking function removed in favor of guest accounts
     
     /**
      * Track a generic download

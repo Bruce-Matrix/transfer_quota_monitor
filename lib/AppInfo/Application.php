@@ -4,13 +4,10 @@ declare(strict_types=1);
 
 namespace OCA\TransferQuotaMonitor\AppInfo;
 
-use OCA\TransferQuotaMonitor\Cron\ActivityDownloadTrackerJob;
 use OCA\TransferQuotaMonitor\Cron\MonthlyReset;
 use OCA\TransferQuotaMonitor\Cron\UsageTrackingJob;
 use OCA\TransferQuotaMonitor\Listener\DownloadListener;
 use OCA\TransferQuotaMonitor\Listener\FileOperationListener;
-use OCA\TransferQuotaMonitor\Listener\PublicShareDownloadListener;
-use OCA\TransferQuotaMonitor\Listener\PublicShareHookListener;
 use OCA\TransferQuotaMonitor\Listener\ShareDownloadListener;
 use OCA\TransferQuotaMonitor\Middleware\DownloadTrackingMiddleware;
 use OCP\AppFramework\App;
@@ -53,7 +50,6 @@ class Application extends App implements IBootstrap {
         
         // Register download event handlers
         $context->registerEventListener(BeforeFileDownloadedEvent::class, DownloadListener::class);
-        $context->registerEventListener(BeforeFileDownloadedEvent::class, PublicShareDownloadListener::class);
         $context->registerEventListener(BeforeFileDownloadedEvent::class, ShareDownloadListener::class);
         $context->registerEventListener(BeforeShareDownloadedEvent::class, ShareDownloadListener::class);
         
@@ -72,7 +68,6 @@ class Application extends App implements IBootstrap {
         $context->injectFn(function(IJobList $jobList) {
             $jobList->add(UsageTrackingJob::class);
             $jobList->add(MonthlyReset::class);
-            $jobList->add(ActivityDownloadTrackerJob::class);
         });
     }
 }
