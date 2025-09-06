@@ -1,6 +1,11 @@
 # Changelog
 
 
+## 1.0.2 - 2025-09-05
+### Updated
+- Extended Nextcloud compatibility to version 33
+- Resolved app store ownership lock issue
+
 ## 1.0.1 - 2025-05-28
 ### Fixed
 - Removed deprecated ActivityDownloadTrackerJob references

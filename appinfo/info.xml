@@ -5,7 +5,7 @@
     <name>Transfer Quota Monitor</name>
     <summary>Monitor user transfer quotas for upload and download limits</summary>
     <description><![CDATA[Monitor and enforce user data transfer quotas (upload and download) with configurable limits and notifications]]></description>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <licence>agpl</licence>
     <author>Bruce Matrix</author>
     <namespace>TransferQuotaMonitor</namespace>
@@ -22,7 +22,7 @@
     
     
     <dependencies>
-        <nextcloud min-version="31" max-version="32"/>
+        <nextcloud min-version="31" max-version="33"/>
     </dependencies>
     
     <repair-steps>
