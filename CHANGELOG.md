@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.5 - 2025-09-12
+### Changed
+- Reverted to RAW GitHub screenshot URLs for better display in Nextcloud app store
 
 ## 1.0.4 - 2025-09-12
 ### Changed
