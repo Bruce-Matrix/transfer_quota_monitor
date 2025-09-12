@@ -1,6 +1,10 @@
 # Changelog
 
 
+## 1.0.4 - 2025-09-12
+### Changed
+- Reverted to original GitHub screenshot URLs
+
 ## 1.0.3 - 2025-09-12
 ### Fixed
 - Fixed screenshot URLs to display properly in Nextcloud app store
