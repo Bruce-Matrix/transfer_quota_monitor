@@ -5,7 +5,7 @@
     <name>Transfer Quota Monitor</name>
     <summary>Monitor user transfer quotas for upload and download limits</summary>
     <description><![CDATA[Monitor and enforce user data transfer quotas (upload and download) with configurable limits and notifications]]></description>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <licence>agpl</licence>
     <author>Bruce Matrix</author>
     <namespace>TransferQuotaMonitor</namespace>
@@ -15,10 +15,10 @@
     <website>https://github.com/Bruce-Matrix/transfer_quota_monitor</website>
     <bugs>https://github.com/Bruce-Matrix/transfer_quota_monitor/issues</bugs>
     <repository type="git">https://github.com/Bruce-Matrix/transfer_quota_monitor.git</repository>
-    <screenshot>https://github.com/Bruce-Matrix/transfer_quota_monitor/blob/main/screenshots/admin-dashboard.png</screenshot>
-    <screenshot>https://github.com/Bruce-Matrix/transfer_quota_monitor/blob/main/screenshots/user-notification-bell.png</screenshot>
-    <screenshot>https://github.com/Bruce-Matrix/transfer_quota_monitor/blob/main/screenshots/user-notification-email.png</screenshot>
-    <screenshot>https://github.com/Bruce-Matrix/transfer_quota_monitor/blob/main/screenshots/admin-notification.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/Bruce-Matrix/transfer_quota_monitor/main/screenshots/admin-dashboard.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/Bruce-Matrix/transfer_quota_monitor/main/screenshots/user-notification-bell.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/Bruce-Matrix/transfer_quota_monitor/main/screenshots/user-notification-email.png</screenshot>
+    <screenshot>https://raw.githubusercontent.com/Bruce-Matrix/transfer_quota_monitor/main/screenshots/admin-notification.png</screenshot>
     
     
     <dependencies>

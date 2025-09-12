@@ -1,6 +1,10 @@
 # Changelog
 
 
+## 1.0.3 - 2025-09-12
+### Fixed
+- Fixed screenshot URLs to display properly in Nextcloud app store
+
 ## 1.0.2 - 2025-09-05
 ### Updated
 - Extended Nextcloud compatibility to version 33
