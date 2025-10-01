@@ -4,6 +4,7 @@
 ### Fixed
 - Fixed monthly reset job to use correct method `resetAllUsage()` instead of deprecated `resetAllUserTransfers()`
 - Improved logging for monthly reset operations with success/failure status
+- Fixed deprecated implicit nullable parameters in UsageTrackingJob constructor (PHP 8.4 compatibility)
 
 ## 1.0.5 - 2025-09-12
 ### Changed
