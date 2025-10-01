@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.6 - 2025-10-01
+### Fixed
+- Fixed monthly reset job to use correct method `resetAllUsage()` instead of deprecated `resetAllUserTransfers()`
+- Improved logging for monthly reset operations with success/failure status
+
 ## 1.0.5 - 2025-09-12
 ### Changed
 - Reverted to RAW GitHub screenshot URLs for better display in Nextcloud app store

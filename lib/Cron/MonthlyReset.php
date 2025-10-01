@@ -62,10 +62,10 @@ class MonthlyReset extends TimedJob {
                 }
                 
                 if ($this->quotaService) {
-                    $result = $this->quotaService->resetAllUserTransfers();
+                    $success = $this->quotaService->resetAllUsage();
                     
                     if ($this->logger) {
-                        $this->logger->info('Monthly transfer quota reset complete: ' . $result . ' users reset');
+                        $this->logger->info('Monthly transfer quota reset ' . ($success ? 'completed successfully' : 'failed'));
                     }
                 }
             } catch (\Exception $e) {
