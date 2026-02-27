@@ -72,7 +72,7 @@ class TransferQuotaService {
                 warning_sent SMALLINT NOT NULL DEFAULT 0, 
                 critical_warning_sent SMALLINT NOT NULL DEFAULT 0
             )";
-            $this->db->executeUpdate($sql);
+            $this->db->executeStatement($sql);
         }
     }
     
@@ -92,9 +92,9 @@ class TransferQuotaService {
                ->from('*PREFIX*transfer_quota_limits')
                ->where($qb->expr()->eq('user_id', $qb->createNamedParameter($userId)));
             
-            $result = $qb->execute();
-            $row = $result->fetch();
-            $result->closeCursor();
+            $result = $qb->executeQuery();
+            $row = $result->fetchAssociative();
+            $result->free();
             
             if ($row) {
                 return [
@@ -152,7 +152,7 @@ class TransferQuotaService {
                 }
                 
                 $qb->where($qb->expr()->eq('user_id', $qb->createNamedParameter($userId)));
-                $qb->execute();
+                $qb->executeStatement();
             } else {
                 // Insert
                 $qb->insert('*PREFIX*transfer_quota_limits')
@@ -165,7 +165,7 @@ class TransferQuotaService {
                         'critical_warning_sent' => $qb->createNamedParameter(0, \PDO::PARAM_INT)
                    ]);
                 
-                $qb->execute();
+                $qb->executeStatement();
             }
             
             // Immediately check if the user's current usage exceeds the new quota thresholds
@@ -207,7 +207,7 @@ class TransferQuotaService {
                ->set('current_usage', $qb->createNamedParameter((string)$newUsage, \PDO::PARAM_STR))
                ->where($qb->expr()->eq('user_id', $qb->createNamedParameter($userId)));
             
-            $qb->execute();
+            $qb->executeStatement();
             
             // Check thresholds
             $this->checkThresholds($userId, $newUsage, $quota['limit']);
@@ -241,7 +241,7 @@ class TransferQuotaService {
            ->set('warning_sent', $qb->createNamedParameter(0, \PDO::PARAM_INT))
            ->set('critical_warning_sent', $qb->createNamedParameter(0, \PDO::PARAM_INT))
            ->where($qb->expr()->eq('user_id', $qb->createNamedParameter($userId)));
-        $qb->execute();
+        $qb->executeStatement();
         
         // Check thresholds with current usage
         $this->checkThresholds($userId, $quota['usage'], $quota['limit']);
@@ -268,7 +268,7 @@ class TransferQuotaService {
                ->set('critical_warning_sent', $qb->createNamedParameter(0, \PDO::PARAM_INT))
                ->where($qb->expr()->eq('user_id', $qb->createNamedParameter($userId)));
             
-            $qb->execute();
+            $qb->executeStatement();
             
             return true;
         } catch (\Exception $e) {
@@ -294,7 +294,7 @@ class TransferQuotaService {
                ->set('warning_sent', $qb->createNamedParameter(0, \PDO::PARAM_INT))
                ->set('critical_warning_sent', $qb->createNamedParameter(0, \PDO::PARAM_INT));
             
-            $qb->execute();
+            $qb->executeStatement();
             
             return true;
         } catch (\Exception $e) {
@@ -343,7 +343,7 @@ class TransferQuotaService {
                ->set('warning_sent', $qb->createNamedParameter(1, \PDO::PARAM_INT))
                ->where($qb->expr()->eq('user_id', $qb->createNamedParameter($userId)));
             
-            $qb->execute();
+            $qb->executeStatement();
         }
         
         // Critical notification
@@ -363,7 +363,7 @@ class TransferQuotaService {
                ->set('critical_warning_sent', $qb->createNamedParameter(1, \PDO::PARAM_INT))
                ->where($qb->expr()->eq('user_id', $qb->createNamedParameter($userId)));
             
-            $qb->execute();
+            $qb->executeStatement();
         }
     }
     

@@ -19,16 +19,16 @@ class UsageTrackingJob extends TimedJob {
         if ($time === null) {
             $time = Server::get(ITimeFactory::class);
         }
-
+        
         parent::__construct($time);
-
+        
         // When called from background job system, get UsageListener using the server container
         if ($usageListener === null) {
             $this->usageListener = Server::get(UsageListener::class);
         } else {
             $this->usageListener = $usageListener;
         }
-
+        
         // Run every 5 minutes
         $this->setInterval(5 * 60);
     }

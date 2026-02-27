@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.7 - 2026-02-27
+### Fixed
+- Fixed database query execution for Nextcloud 33 compatibility
+
 ## 1.0.6 - 2025-10-01
 ### Fixed
 - Fixed monthly reset job to use correct method `resetAllUsage()` instead of deprecated `resetAllUserTransfers()`
