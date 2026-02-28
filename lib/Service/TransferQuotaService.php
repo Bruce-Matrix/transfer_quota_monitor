@@ -94,7 +94,11 @@ class TransferQuotaService {
             
             $result = $qb->executeQuery();
             $row = $result->fetchAssociative();
-            $result->free();
+            if (method_exists($result, 'free')) {
+                $result->free();
+            } elseif (method_exists($result, 'closeCursor')) {
+                $result->closeCursor();
+            }
             
             if ($row) {
                 return [
