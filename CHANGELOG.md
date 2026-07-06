@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.9 - 2026-07-06
+### Fixed
+- Fixed Nextcloud 34 compatibility
+
 ## 1.0.8 - 2026-02-27
 ### Fixed
 - Fixed database result handling for Nextcloud 33 compatibility

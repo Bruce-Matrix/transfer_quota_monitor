@@ -7,6 +7,7 @@ namespace OCA\TransferQuotaMonitor\Notification;
 use OCP\L10N\IFactory;
 use OCP\Notification\INotification;
 use OCP\Notification\INotifier;
+use OCP\Notification\UnknownNotificationException;
 use OCP\IURLGenerator;
 
 class Notifier implements INotifier {
@@ -31,7 +32,7 @@ class Notifier implements INotifier {
 
     public function prepare(INotification $notification, string $languageCode): INotification {
         if ($notification->getApp() !== 'transfer_quota_monitor') {
-            throw new \InvalidArgumentException('Application not supported');
+            throw new UnknownNotificationException();
         }
         
         // Prevent duplicate notifications by tracking what we've recently sent
@@ -40,7 +41,7 @@ class Notifier implements INotifier {
             // Skip duplicates of the same type that were recently processed
             $timeSinceLastNotification = time() - self::$sentNotifications[$notificationKey];
             if ($timeSinceLastNotification < 300) { // 5 minutes
-                throw new \InvalidArgumentException('Duplicate notification skipped');
+                return $notification;
             }
         }
         
@@ -110,7 +111,7 @@ class Notifier implements INotifier {
             $notification->setLink($filesUrl);
 
         } else {
-            throw new \InvalidArgumentException('Subject not supported: ' . $notification->getSubject());
+            throw new UnknownNotificationException();
         }
 
         return $notification;
